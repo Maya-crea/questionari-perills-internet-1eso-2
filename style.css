@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0052CC 0%, #003B99 100%);
     min-height: 100vh;
     color: #333;
     padding: 2rem;
@@ -111,7 +111,7 @@ button:first-of-type {
 }
 
 button:last-of-type {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
 }
 
 /* Resultado */
