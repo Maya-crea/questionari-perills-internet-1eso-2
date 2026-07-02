@@ -1,0 +1,175 @@
+<!--Aquest formulari em servirà per avaluar l'alumnat quan tinguem la xarrada de Seguretat a Internet
+Usuari principal: alumnat de 1r d'ESO
+Objectiu: Conèixer els perills d'Internet i com evitar-los
+
+Qüestionari de 10 preguntes sobre Perills a Internet, amb 4 opcions de resposta, on només 1 és correcta.
+L'alumnat haurà de triar l'opció correcta i tindrà un botó per a corregir les respostes-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Peligros en Internet</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #d4e5fc;
+        margin: 0;
+        padding: 2rem;
+      }
+      .container {
+        max-width: 900px;
+        margin: auto;
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+      h1 {
+        text-align: center;
+        color: #1f4e79;
+      }
+      .pregunta {
+        margin-bottom: 1.5rem;
+      }
+      .pregunta p {
+        font-weight: bold;
+        margin-bottom: 0.6rem;
+      }
+      .opcion {
+        display: block;
+        margin: 0.4rem 0;
+      }
+      button {
+        background: #1f4e79;
+        color: white;
+        border: none;
+        padding: 0.8rem 1.2rem;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Peligros en Internet</h1>
+      <form>
+        <div class="pregunta">
+          <p>1. ¿Qué es un phishing?</p>
+          <label class="opcion"><input type="radio" name="p1" value="a"> Un ataque que intenta engañar para robar datos</label>
+          <label class="opcion"><input type="radio" name="p1" value="b"> Un programa para limpiar el ordenador</label>
+          <label class="opcion"><input type="radio" name="p1" value="c"> Un navegador web</label>
+          <label class="opcion"><input type="radio" name="p1" value="d"> Un tipo de antivirus</label>
+        </div>
+
+        <div class="pregunta">
+          <p>2. ¿Qué debes hacer si recibes un mensaje sospechoso de un desconocido?</p>
+          <label class="opcion"><input type="radio" name="p2" value="a"> Abrirlo y responder</label>
+          <label class="opcion"><input type="radio" name="p2" value="b"> Borrarlo y no hacer clic</label>
+          <label class="opcion"><input type="radio" name="p2" value="c"> Compartirlo con todos</label>
+          <label class="opcion"><input type="radio" name="p2" value="d"> Descargarlo para revisarlo</label>
+        </div>
+
+        <div class="pregunta">
+          <p>3. ¿Por qué son peligrosas las contraseñas débiles?</p>
+          <label class="opcion"><input type="radio" name="p3" value="a"> Son difíciles de recordar</label>
+          <label class="opcion"><input type="radio" name="p3" value="b"> Son fáciles de adivinar o romper</label>
+          <label class="opcion"><input type="radio" name="p3" value="c"> Hacen más lenta la conexión</label>
+          <label class="opcion"><input type="radio" name="p3" value="d"> No tienen ningún riesgo</label>
+        </div>
+
+        <div class="pregunta">
+          <p>4. ¿Qué significa descargar software de fuentes desconocidas?</p>
+          <label class="opcion"><input type="radio" name="p4" value="a"> Es siempre seguro</label>
+          <label class="opcion"><input type="radio" name="p4" value="b"> Puede contener malware</label>
+          <label class="opcion"><input type="radio" name="p4" value="c"> Mejora el rendimiento</label>
+          <label class="opcion"><input type="radio" name="p4" value="d"> Solo sirve para juegos</label>
+        </div>
+
+        <div class="pregunta">
+          <p>5. ¿Qué es un ransomware?</p>
+          <label class="opcion"><input type="radio" name="p5" value="a"> Un programa que cifra archivos y pide dinero</label>
+          <label class="opcion"><input type="radio" name="p5" value="b"> Un antivirus gratuito</label>
+          <label class="opcion"><input type="radio" name="p5" value="c"> Un tipo de Wi-Fi</label>
+          <label class="opcion"><input type="radio" name="p5" value="d"> Un navegador seguro</label>
+        </div>
+
+        <div class="pregunta">
+          <p>6. ¿Cuál es la mejor manera de proteger tus datos?</p>
+          <label class="opcion"><input type="radio" name="p6" value="a"> Compartir la contraseña con amigos</label>
+          <label class="opcion"><input type="radio" name="p6" value="b"> Usar contraseñas únicas y fuertes</label>
+          <label class="opcion"><input type="radio" name="p6" value="c"> Guardarlas en un papel en la mesa</label>
+          <label class="opcion"><input type="radio" name="p6" value="d"> Usar siempre la misma contraseña</label>
+        </div>
+
+        <div class="pregunta">
+          <p>7. ¿Qué debes hacer si una web pide datos bancarios de forma extraña?</p>
+          <label class="opcion"><input type="radio" name="p7" value="a"> Introducirlos rápidamente</label>
+          <label class="opcion"><input type="radio" name="p7" value="b"> Verificar la autenticidad antes de proporcionar datos</label>
+          <label class="opcion"><input type="radio" name="p7" value="c"> Compartirlos con todos</label>
+          <label class="opcion"><input type="radio" name="p7" value="d"> Reenviarla a tus contactos</label>
+        </div>
+
+        <div class="pregunta">
+          <p>8. ¿Qué es un malware?</p>
+          <label class="opcion"><input type="radio" name="p8" value="a"> Un programa malicioso</label>
+          <label class="opcion"><input type="radio" name="p8" value="b"> Un tipo de teclado</label>
+          <label class="opcion"><input type="radio" name="p8" value="c"> Un sistema operativo</label>
+          <label class="opcion"><input type="radio" name="p8" value="d"> Una red social</label>
+        </div>
+
+        <div class="pregunta">
+          <p>9. ¿Por qué es peligroso hacer clic en enlaces desconocidos?</p>
+          <label class="opcion"><input type="radio" name="p9" value="a"> Pueden llevar a páginas falsas o maliciosas</label>
+          <label class="opcion"><input type="radio" name="p9" value="b"> Siempre hacen descargar música</label>
+          <label class="opcion"><input type="radio" name="p9" value="c"> Mejoran la velocidad del móvil</label>
+          <label class="opcion"><input type="radio" name="p9" value="d"> No causan ningún problema</label>
+        </div>
+
+        <div class="pregunta">
+          <p>10. ¿Qué recomendación es correcta para navegar con seguridad?</p>
+          <label class="opcion"><input type="radio" name="p10" value="a"> Mantener el software actualizado</label>
+          <label class="opcion"><input type="radio" name="p10" value="b"> Desactivar todas las actualizaciones</label>
+          <label class="opcion"><input type="radio" name="p10" value="c"> Abrir cualquier adjunto</label>
+          <label class="opcion"><input type="radio" name="p10" value="d"> Compartir contraseñas por chat</label>
+        </div>
+
+        <button type="submit">Enviar respuestas</button>
+        <button type="button" id="corregirBtn">Corregir</button>
+        <div id="resultado" style="margin-top: 1rem; font-weight: bold; color: #1f4e79;"></div>
+      </form>
+    </div>
+    <script>
+      const respuestasCorrectas = {
+        p1: 'a',
+        p2: 'b',
+        p3: 'b',
+        p4: 'b',
+        p5: 'a',
+        p6: 'b',
+        p7: 'b',
+        p8: 'a',
+        p9: 'a',
+        p10: 'a'
+      };
+
+      document.getElementById('corregirBtn').addEventListener('click', () => {
+        let aciertos = 0;
+        const preguntas = Object.keys(respuestasCorrectas);
+
+        preguntas.forEach(nombre => {
+          const seleccion = document.querySelector(`input[name="${nombre}"]:checked`);
+          if (seleccion && seleccion.value === respuestasCorrectas[nombre]) {
+            aciertos += 1;
+          }
+        });
+
+        const resultado = document.getElementById('resultado');
+        resultado.textContent = `Has acertado ${aciertos} de ${preguntas.length} preguntas.`;
+      });
+    </script>
+  </body>
+</html>
