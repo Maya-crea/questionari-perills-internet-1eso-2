@@ -142,34 +142,6 @@ L'alumnat haurà de triar l'opció correcta i tindrà un botó per a corregir le
         <div id="resultado" style="margin-top: 1rem; font-weight: bold; color: #1f4e79;"></div>
       </form>
     </div>
-    <script>
-      const respuestasCorrectas = {
-        p1: 'a',
-        p2: 'b',
-        p3: 'b',
-        p4: 'b',
-        p5: 'a',
-        p6: 'b',
-        p7: 'b',
-        p8: 'a',
-        p9: 'a',
-        p10: 'a'
-      };
-
-      document.getElementById('corregirBtn').addEventListener('click', () => {
-        let aciertos = 0;
-        const preguntas = Object.keys(respuestasCorrectas);
-
-        preguntas.forEach(nombre => {
-          const seleccion = document.querySelector(`input[name="${nombre}"]:checked`);
-          if (seleccion && seleccion.value === respuestasCorrectas[nombre]) {
-            aciertos += 1;
-          }
-        });
-
-        const resultado = document.getElementById('resultado');
-        resultado.textContent = `Has acertado ${aciertos} de ${preguntas.length} preguntas.`;
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
