@@ -379,10 +379,18 @@ function renderTema(temaId) {
                 <h1>${tema.title}</h1>
                 <p>${tema.description}</p>
             </div>
+            <div>
+                <div id="contadorAciertos" class="contador-aciertos">Aciertos: 0/${tema.questions.length}</div>
+                <div class="progreso-wrapper">
+                    <div class="progreso-barra">
+                        <div id="progresoBarra"></div>
+                    </div>
+                </div>
+            </div>
         </div>
         <form id="quizForm">
             ${tema.questions.map((pregunta, index) => `
-                <div class="pregunta">
+                <div class="pregunta" data-index="${index}">
                     <p>${index + 1}. ${pregunta.prompt}</p>
                     ${pregunta.options.map(opcion => `
                         <label class="opcion">
@@ -406,6 +414,54 @@ function renderTema(temaId) {
         corregirRespuestas(tema);
     });
     document.getElementById('corregirBtn').addEventListener('click', () => corregirRespuestas(tema));
+
+    document.querySelectorAll('.pregunta input[type="radio"]').forEach(input => {
+        input.addEventListener('change', () => mostrarFeedbackPregunta(input, tema));
+    });
+}
+
+function actualizarContadorAciertos(tema) {
+    const contador = document.getElementById('contadorAciertos');
+    const barra = document.getElementById('progresoBarra');
+    if (!contador || !barra) {
+        return;
+    }
+
+    let aciertos = 0;
+    tema.questions.forEach((pregunta, index) => {
+        const seleccion = document.querySelector(`input[name="q${index + 1}"]:checked`);
+        if (seleccion && seleccion.value === pregunta.answer) {
+            aciertos += 1;
+        }
+    });
+
+    const porcentaje = Math.round((aciertos / tema.questions.length) * 100);
+    contador.textContent = `Aciertos: ${aciertos}/${tema.questions.length}`;
+    barra.style.width = `${porcentaje}%`;
+}
+
+function mostrarFeedbackPregunta(input, tema) {
+    const preguntaIndex = input.name.replace('q', '') - 1;
+    const pregunta = tema.questions[preguntaIndex];
+    const preguntaContainer = input.closest('.pregunta');
+    const opciones = preguntaContainer.querySelectorAll('.opcion');
+
+    opciones.forEach(opcion => {
+        opcion.classList.remove('correcta', 'incorrecta');
+    });
+
+    const seleccion = input.closest('label');
+    if (input.value === pregunta.answer) {
+        seleccion.classList.add('correcta');
+    } else {
+        seleccion.classList.add('incorrecta');
+        const correcta = Array.from(opciones).find(opcion => opcion.querySelector('input').value === pregunta.answer);
+        if (correcta) {
+            correcta.classList.add('correcta');
+        }
+    }
+
+    actualizarContadorAciertos(tema);
 }
 
 function corregirRespuestas(tema) {
@@ -434,6 +490,7 @@ function corregirRespuestas(tema) {
         }
     });
 
+    actualizarContadorAciertos(tema);
     mostrarResultado(aciertos, total);
 }
 
