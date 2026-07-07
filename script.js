@@ -118,14 +118,103 @@ function limpiarRespuestas() {
     document.getElementById('resultado').style.display = 'none';
 }
 
+// Función para abrir la actividad extra al finalizar
+function mostrarActividadExtra() {
+    const panel = document.getElementById('actividadPanel');
+    if (panel) {
+        panel.classList.add('visible');
+    }
+}
+
+function comprobarActividadExtra() {
+    const feedback = document.getElementById('feedbackActividad');
+    const contador = document.getElementById('contadorActividad');
+    const preguntas = [
+        { name: 'actividadPregunta1', correct: 'phishing', texto: 'un phishing' },
+        { name: 'actividadPregunta2', correct: 'password', texto: 'una buena práctica para proteger la contraseña' },
+        { name: 'actividadPregunta3', correct: 'enlace', texto: 'un enlace sospechoso' },
+        { name: 'actividadPregunta4', correct: 'wifi', texto: 'un riesgo en Wi-Fi público' }
+    ];
+
+    let aciertos = 0;
+
+    document.querySelectorAll('.opcion-imagen').forEach(opcion => {
+        opcion.classList.remove('seleccionada', 'correcta', 'incorrecta');
+    });
+
+    preguntas.forEach((pregunta) => {
+        const respuesta = document.querySelector(`input[name="${pregunta.name}"]:checked`);
+        const opciones = document.querySelectorAll(`input[name="${pregunta.name}"]`);
+
+        opciones.forEach(opcion => {
+            const item = opcion.closest('.opcion-imagen');
+            if (opcion.value === pregunta.correct) {
+                item.classList.add('correcta');
+            }
+        });
+
+        if (!respuesta) {
+            return;
+        }
+
+        const opcionSeleccionada = respuesta.closest('.opcion-imagen');
+        opcionSeleccionada.classList.add('seleccionada');
+
+        if (respuesta.value === pregunta.correct) {
+            aciertos += 1;
+            opcionSeleccionada.classList.add('correcta');
+        } else {
+            opcionSeleccionada.classList.add('incorrecta');
+        }
+    });
+
+    contador.textContent = `Aciertos: ${aciertos} / ${preguntas.length}`;
+
+    if (aciertos === preguntas.length) {
+        feedback.textContent = '¡Perfecto! Has acertado todas las imágenes.';
+        feedback.style.color = '#27ae60';
+    } else if (aciertos > 0) {
+        feedback.textContent = `Has acertado ${aciertos} de ${preguntas.length}. Sigue practicando.`;
+        feedback.style.color = '#f39c12';
+    } else {
+        feedback.textContent = 'Inténtalo de nuevo. Revisa las imágenes y prueba otra vez.';
+        feedback.style.color = '#e74c3c';
+    }
+}
+
 // Event listeners
 document.addEventListener('DOMContentLoaded', function() {
     const corregirBtn = document.getElementById('corregirBtn');
+    const abrirActividadBtn = document.getElementById('abrirActividadBtn');
+    const comprobarActividadBtn = document.getElementById('comprobarActividadBtn');
     const limpiarBtn = document.getElementById('limpiarBtn');
+    const opcionesActividad = document.querySelectorAll('.opcion-imagen');
     
     if (corregirBtn) {
-        corregirBtn.addEventListener('click', corregirRespuestas);
+        corregirBtn.addEventListener('click', function() {
+            corregirRespuestas();
+            mostrarActividadExtra();
+        });
     }
+
+    if (abrirActividadBtn) {
+        abrirActividadBtn.addEventListener('click', mostrarActividadExtra);
+    }
+
+    if (comprobarActividadBtn) {
+        comprobarActividadBtn.addEventListener('click', comprobarActividadExtra);
+    }
+
+    opcionesActividad.forEach(opcion => {
+        const input = opcion.querySelector('input[type="radio"]');
+        input.addEventListener('change', function() {
+            const grupo = input.name;
+            document.querySelectorAll(`input[name="${grupo}"]`).forEach(item => {
+                item.closest('.opcion-imagen').classList.remove('seleccionada');
+            });
+            opcion.classList.add('seleccionada');
+        });
+    });
     
     if (limpiarBtn) {
         limpiarBtn.addEventListener('click', limpiarRespuestas);

@@ -130,3 +130,133 @@ button:last-of-type {
 #resultado:not(:empty) {
     display: block;
 }
+
+.actividad-extra {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fb;
+    border-radius: 12px;
+    border: 2px dashed #667eea;
+}
+
+.actividad-extra h2 {
+    color: #1f4e79;
+    margin-bottom: 0.5rem;
+}
+
+.actividad-extra p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.actividad-panel {
+    display: none;
+    margin-top: 1rem;
+}
+
+.actividad-panel.visible {
+    display: block;
+}
+
+.actividad-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.actividad-pregunta {
+    font-weight: 700;
+    color: #1f4e79;
+    margin: 0;
+}
+
+.contador-actividad {
+    background: #e8f0ff;
+    color: #1f4e79;
+    padding: 0.6rem 0.9rem;
+    border-radius: 999px;
+    font-weight: 700;
+}
+
+.pregunta-imagen {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: white;
+    border: 1px solid #e0e7ff;
+    border-radius: 10px;
+}
+
+.pregunta-imagen p {
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: #333;
+}
+
+.opciones-imagenes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.actividad-item {
+    background: white;
+    border: 2px solid #dfe7f5;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.actividad-item:hover {
+    border-color: #667eea;
+    transform: translateY(-2px);
+}
+
+.actividad-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    background: #f8f9fb;
+}
+
+.actividad-item span {
+    font-weight: 600;
+    color: #333;
+}
+
+.actividad-item input[type="radio"] {
+    accent-color: #667eea;
+}
+
+.actividad-item.seleccionada {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+.actividad-item.correcta {
+    border-color: #27ae60;
+    background: #ecfdf3;
+}
+
+.actividad-item.incorrecta {
+    border-color: #e74c3c;
+    background: #fef2f2;
+}
+
+.feedback-actividad {
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #764ba2;
+}
+
+@media (max-width: 700px) {
+    .opciones-imagenes {
+        grid-template-columns: 1fr;
+    }
+}

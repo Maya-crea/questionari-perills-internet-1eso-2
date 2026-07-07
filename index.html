@@ -140,6 +140,126 @@ L'alumnat haurà de triar l'opció correcta i tindrà un botó per a corregir le
         <button type="submit">Enviar respuestas</button>
         <button type="button" id="corregirBtn">Corregir</button>
         <div id="resultado" style="margin-top: 1rem; font-weight: bold; color: #1f4e79;"></div>
+
+        <div id="actividadExtra" class="actividad-extra">
+          <h2>Actividad extra: Reconoce los peligros</h2>
+          <p>Observa cada imagen y marca qué peligro o buena práctica representa.</p>
+          <button type="button" id="abrirActividadBtn">Abrir actividad</button>
+
+          <div id="actividadPanel" class="actividad-panel">
+            <div class="actividad-header">
+              <p class="actividad-pregunta">Responde a estas preguntas visuales sobre peligros en Internet</p>
+              <div id="contadorActividad" class="contador-actividad">Aciertos: 0 / 4</div>
+            </div>
+
+            <div class="pregunta-imagen" data-question="actividadPregunta1">
+              <p>1. ¿Cuál imagen representa un phishing?</p>
+              <div class="opciones-imagenes">
+                <label class="actividad-item opcion-imagen">
+                  <input type="radio" name="actividadPregunta1" value="phishing" />
+                  <img src="assets/phishing.svg" alt="Mensaje sospechoso que intenta engañar" />
+                  <span>Mensaje sospechoso</span>
+                </label>
+                <label class="actividad-item opcion-imagen">
+                  <input type="radio" name="actividadPregunta1" value="password" />
+                  <img src="assets/password.svg" alt="Contraseña segura" />
+                  <span>Contraseña segura</span>
+                </label>
+                <label class="actividad-item opcion-imagen">
+                  <input type="radio" name="actividadPregunta1" value="enlace" />
+                  <img src="assets/enlace.svg" alt="Enlace sospechoso" />
+                  <span>Enlace sospechoso</span>
+                </label>
+                <label class="actividad-item opcion-imagen">
+                  <input type="radio" name="actividadPregunta1" value="wifi" />
+                  <img src="assets/wifi.svg" alt="Wi-Fi público peligroso" />
+                  <span>Wi-Fi público</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="pregunta-imagen" data-question="actividadPregunta2">
+              <p>2. ¿Cuál imagen muestra una buena práctica para proteger tu contraseña?</p>
+              <div class="opciones-imagenes">
+                <label class="actividad-item opcion-imagen">
+                  <input type="radio" name="actividadPregunta2" value="phishing" />
+                  <img src="assets/phishing.svg" alt="Mensaje sospechoso que intenta engañar" />
+                  <span>Mensaje sospechoso</span>
+                </label>
+                <label class="actividad-item opcion-imagen">
+                  <input type="radio" name="actividadPregunta2" value="password" />
+                  <img src="assets/password.svg" alt="Contraseña segura" />
+                  <span>Contraseña segura</span>
+                </label>
+                <label class="actividad-item opcion-imagen">
+                  <input type="radio" name="actividadPregunta2" value="enlace" />
+                  <img src="assets/enlace.svg" alt="Enlace sospechoso" />
+                  <span>Enlace sospechoso</span>
+                </label>
+                <label class="actividad-item opcion-imagen">
+                  <input type="radio" name="actividadPregunta2" value="wifi" />
+                  <img src="assets/wifi.svg" alt="Wi-Fi público peligroso" />
+                  <span>Wi-Fi público</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="pregunta-imagen" data-question="actividadPregunta3">
+              <p>3. ¿Cuál imagen representa un enlace sospechoso?</p>
+              <div class="opciones-imagenes">
+                <label class="actividad-item opcion-imagen">
+                  <input type="radio" name="actividadPregunta3" value="phishing" />
+                  <img src="assets/phishing.svg" alt="Mensaje sospechoso que intenta engañar" />
+                  <span>Mensaje sospechoso</span>
+                </label>
+                <label class="actividad-item opcion-imagen">
+                  <input type="radio" name="actividadPregunta3" value="password" />
+                  <img src="assets/password.svg" alt="Contraseña segura" />
+                  <span>Contraseña segura</span>
+                </label>
+                <label class="actividad-item opcion-imagen">
+                  <input type="radio" name="actividadPregunta3" value="enlace" />
+                  <img src="assets/enlace.svg" alt="Enlace sospechoso" />
+                  <span>Enlace sospechoso</span>
+                </label>
+                <label class="actividad-item opcion-imagen">
+                  <input type="radio" name="actividadPregunta3" value="wifi" />
+                  <img src="assets/wifi.svg" alt="Wi-Fi público peligroso" />
+                  <span>Wi-Fi público</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="pregunta-imagen" data-question="actividadPregunta4">
+              <p>4. ¿Cuál imagen muestra un riesgo en Wi-Fi público?</p>
+              <div class="opciones-imagenes">
+                <label class="actividad-item opcion-imagen">
+                  <input type="radio" name="actividadPregunta4" value="phishing" />
+                  <img src="assets/phishing.svg" alt="Mensaje sospechoso que intenta engañar" />
+                  <span>Mensaje sospechoso</span>
+                </label>
+                <label class="actividad-item opcion-imagen">
+                  <input type="radio" name="actividadPregunta4" value="password" />
+                  <img src="assets/password.svg" alt="Contraseña segura" />
+                  <span>Contraseña segura</span>
+                </label>
+                <label class="actividad-item opcion-imagen">
+                  <input type="radio" name="actividadPregunta4" value="enlace" />
+                  <img src="assets/enlace.svg" alt="Enlace sospechoso" />
+                  <span>Enlace sospechoso</span>
+                </label>
+                <label class="actividad-item opcion-imagen">
+                  <input type="radio" name="actividadPregunta4" value="wifi" />
+                  <img src="assets/wifi.svg" alt="Wi-Fi público peligroso" />
+                  <span>Wi-Fi público</span>
+                </label>
+              </div>
+            </div>
+
+            <button type="button" id="comprobarActividadBtn">Comprobar actividad</button>
+            <div id="feedbackActividad" class="feedback-actividad" aria-live="polite"></div>
+          </div>
+        </div>
       </form>
     </div>
     <script src="script.js"></script>
