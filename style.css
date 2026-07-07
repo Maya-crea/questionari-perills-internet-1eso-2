@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
     background: white;
     padding: 2.5rem;
@@ -26,43 +26,107 @@ h1 {
     text-align: center;
     color: #667eea;
     font-size: 2.2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-weight: 700;
 }
 
-/* Estilos del formulario */
+.intro {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.menu-card {
+    background: linear-gradient(135deg, #f8faff 0%, #eef4ff 100%);
+    border: 2px solid #dce7ff;
+    border-radius: 12px;
+    padding: 1.4rem;
+    text-align: left;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.16);
+}
+
+.menu-card h2 {
+    color: #1f4e79;
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+}
+
+.menu-card p {
+    color: #5b6574;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+.menu-card span {
+    display: inline-block;
+    font-weight: 700;
+    color: #667eea;
+}
+
+.quiz-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.quiz-header p {
+    color: #666;
+    margin-top: 0.3rem;
+}
+
+.back-btn {
+    background: #f0f4ff;
+    color: #1f4e79;
+    border: 1px solid #dce7ff;
+    margin: 0;
+}
+
+.back-btn:hover {
+    background: #e8f0ff;
+    box-shadow: none;
+}
+
 form {
     display: flex;
     flex-direction: column;
 }
 
 .pregunta {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1.2rem;
     background: #f8f9fb;
     border-left: 5px solid #667eea;
     border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.pregunta:hover {
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
-    transform: translateX(5px);
 }
 
 .pregunta p {
-    font-weight: 600;
-    margin-bottom: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
     color: #333;
-    font-size: 1rem;
 }
 
 .opcion {
     display: flex;
     align-items: center;
-    margin: 0.7rem 0;
+    margin: 0.6rem 0;
     cursor: pointer;
     transition: all 0.2s ease;
+    padding: 0.35rem 0;
 }
 
 .opcion:hover {
@@ -72,28 +136,38 @@ form {
 .opcion input[type="radio"] {
     width: 18px;
     height: 18px;
-    margin-right: 0.8rem;
+    margin-right: 0.7rem;
     cursor: pointer;
     accent-color: #667eea;
 }
 
-.opcion input[type="radio"]:hover {
-    transform: scale(1.1);
+.opcion.correcta {
+    color: #27ae60;
+    font-weight: 700;
 }
 
-/* Estilos de botones */
+.opcion.incorrecta {
+    color: #e74c3c;
+    font-weight: 700;
+}
+
+.acciones {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
 button {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
     border: none;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.2rem;
     border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
     font-weight: 600;
     transition: all 0.3s ease;
     margin-top: 1rem;
-    margin-right: 1rem;
 }
 
 button:hover {
@@ -106,20 +180,11 @@ button:active {
     box-shadow: 0 3px 10px rgba(102, 126, 234, 0.3);
 }
 
-button:first-of-type {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-button:last-of-type {
-    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-}
-
-/* Resultado */
-#resultado {
-    margin-top: 1.5rem;
-    font-weight: 600;
+.resultado {
+    margin-top: 1.2rem;
+    font-weight: 700;
     color: #764ba2;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     text-align: center;
     padding: 1rem;
     background: #f0f4ff;
@@ -127,136 +192,13 @@ button:last-of-type {
     display: none;
 }
 
-#resultado:not(:empty) {
+.resultado.visible {
     display: block;
 }
 
-.actividad-extra {
-    margin-top: 2rem;
-    padding: 1.5rem;
-    background: #f8f9fb;
-    border-radius: 12px;
-    border: 2px dashed #667eea;
-}
-
-.actividad-extra h2 {
-    color: #1f4e79;
-    margin-bottom: 0.5rem;
-}
-
-.actividad-extra p {
-    margin-bottom: 1rem;
-    color: #555;
-}
-
-.actividad-panel {
-    display: none;
-    margin-top: 1rem;
-}
-
-.actividad-panel.visible {
-    display: block;
-}
-
-.actividad-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
-}
-
-.actividad-pregunta {
-    font-weight: 700;
-    color: #1f4e79;
-    margin: 0;
-}
-
-.contador-actividad {
-    background: #e8f0ff;
-    color: #1f4e79;
-    padding: 0.6rem 0.9rem;
-    border-radius: 999px;
-    font-weight: 700;
-}
-
-.pregunta-imagen {
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    background: white;
-    border: 1px solid #e0e7ff;
-    border-radius: 10px;
-}
-
-.pregunta-imagen p {
-    font-weight: 700;
-    margin-bottom: 0.8rem;
-    color: #333;
-}
-
-.opciones-imagenes {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-}
-
-.actividad-item {
-    background: white;
-    border: 2px solid #dfe7f5;
-    border-radius: 10px;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.actividad-item:hover {
-    border-color: #667eea;
-    transform: translateY(-2px);
-}
-
-.actividad-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    background: #f8f9fb;
-}
-
-.actividad-item span {
-    font-weight: 600;
-    color: #333;
-}
-
-.actividad-item input[type="radio"] {
-    accent-color: #667eea;
-}
-
-.actividad-item.seleccionada {
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
-}
-
-.actividad-item.correcta {
-    border-color: #27ae60;
-    background: #ecfdf3;
-}
-
-.actividad-item.incorrecta {
-    border-color: #e74c3c;
-    background: #fef2f2;
-}
-
-.feedback-actividad {
-    margin-top: 1rem;
-    font-weight: 600;
-    color: #764ba2;
-}
-
-@media (max-width: 700px) {
-    .opciones-imagenes {
+@media (max-width: 760px) {
+    .menu-grid {
         grid-template-columns: 1fr;
     }
 }
+
