@@ -36,6 +36,37 @@ h1 {
     margin-bottom: 2rem;
 }
 
+.toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.lang-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f4f7ff;
+    padding: 0.6rem 0.8rem;
+    border-radius: 999px;
+    border: 1px solid #dce7ff;
+}
+
+.lang-selector label {
+    font-size: 0.95rem;
+    color: #1f4e79;
+    font-weight: 600;
+}
+
+.lang-selector select {
+    border: none;
+    background: transparent;
+    color: #1f4e79;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+}
+
 .menu-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -230,6 +261,10 @@ button:active {
 @media (max-width: 760px) {
     .menu-grid {
         grid-template-columns: 1fr;
+    }
+
+    .toolbar {
+        justify-content: center;
     }
 }
 
