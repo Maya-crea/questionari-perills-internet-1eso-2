@@ -351,7 +351,7 @@ const tematicas = {
 const textosUI = {
     es: {
         title: 'Cuestionarios de seguridad digital',
-        intro: 'Elige una temática para empezar.',
+        intro: 'Elige una temática para empezar',
         idioma: 'Idioma',
         castellano: 'Castellano',
         valenciano: 'Valenciano',
@@ -368,7 +368,7 @@ const textosUI = {
     },
     ca: {
         title: 'Qüestionaris de seguretat digital',
-        intro: 'Tria una temàtica per a començar.',
+        intro: 'Tria una temàtica per a començar',
         idioma: 'Idioma',
         castellano: 'Castellà',
         valenciano: 'Valencià',
