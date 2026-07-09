@@ -1,90 +1,31 @@
-# Cuestionarios de Seguridad Digital
+# Questionari de perills d'Internet per a 1r d'ESO
 
-## 📋 Descripción general
+## Objectiu didàctic
 
-Este proyecto ha evolucionado hacia una herramienta educativa interactiva con un menú inicial que permite elegir entre distintos formularios temáticos sobre seguridad digital. Ahora se trabaja con seis cuestionarios independientes, cada uno con preguntas, corrección automática, feedback visual y seguimiento de aciertos.
+Aquest recurs és una activitat interactiva que ajuda l'alumnat a reconéixer els principals perills d'Internet, a treballar la privadesa i a adquirir hàbits digitals segurs de manera pràctica i motivadora. El qüestionari permet reforçar continguts clau mitjançant preguntes amb retroalimentació immediata i un format atractiu.
 
----
+## Nivell o grup destinatari
 
-## 🎯 Objetivo
+Aquest material està pensat per a l'alumnat de 1r d'ESO, especialment en activitats de classe d'Informàtica, de concienciació digital, tutories...
 
-Ayudar al alumnado a practicar conceptos clave de seguridad en Internet, privacidad, contraseñas, ciberacoso, huella digital, redes sociales e inteligencia artificial de forma dinámica y atractiva.
+## Instruccions d'ús en classe
 
----
+- Presentar el recurs al grup i explicar que es tracta d'un qüestionari sobre seguretat digital.
+- Demanar que responguen de manera individual o per parelles a les preguntes del menú inicial.
+- Revisar les respostes amb el grup per comentar els errors i reforçar els continguts.
+- Fer una conversa final sobre bones pràctiques per navegar amb seguretat i protegir la privadesa.
+- Utilitzar l'activitat com a repàs, introducció o tancament d'una unitat didàctica.
 
-## 🧩 Formulario temáticos disponibles
+## Com provar-lo en local
 
-El proyecto incluye los siguientes formularios:
+1. Obri la carpeta del projecte en l'editor.
+2. Obri el fitxer index.html en un navegador.
+3. Tria una temàtica del menú inicial.
+4. Respon les preguntes i comprova el resultat.
 
-1. Seguridad en Internet
-2. Contraseñas seguras
-3. Ciberacoso y privacidad
-4. Huella digital
-5. Redes sociales
-6. Inteligencia artificial
+## Estructura del projecte
 
-Cada uno de ellos presenta:
-- preguntas con varias opciones de respuesta,
-- feedback inmediato al responder,
-- resaltado visual de respuestas correctas e incorrectas,
-- contador de aciertos,
-- barra de progreso,
-- mensaje final con porcentaje de aciertos.
-
----
-
-## 📁 Estructura del proyecto
-
-```text
-questionari-perills-internet-1eso/
-├── index.html
-├── style.css
-├── script.js
-├── README.md
-└── assets/
-```
-
----
-
-## 🛠️ Tecnologías utilizadas
-
-- HTML5
-- CSS3
-- JavaScript vanilla
-- Diseño responsive
-
----
-
-## 🚀 Cómo usarlo
-
-1. Abre el archivo index.html en tu navegador.
-2. Elige una temática desde el menú inicial.
-3. Responde a las preguntas.
-4. Observa el feedback inmediato y el contador de aciertos.
-5. Pulsa “Corregir” para ver el resultado final del formulario.
-
----
-
-## ✨ Funciones incluidas
-
-- Menú inicial con distintas temáticas
-- Formularios independientes por tema
-- Respuestas con comprobación automática
-- Feedback visual por pregunta
-- Contador de aciertos
-- Barra de progreso
-- Diseño limpio y adaptable a distintos dispositivos
-
----
-
-## 📝 Notas pedagógicas
-
-Este recurso está pensado para usarse en clase como actividad de repaso, refuerzo o evaluación inicial sobre hábitos digitales seguros.
-
----
-
-## 📌 Estado del proyecto
-
-Versión actual: 2.0
-
-Última actualización: 7 de julio de 2026
+- index.html: estructura de la pàgina principal.
+- style.css: estils de la interfície.
+- script.js: lògica del qüestionari i les preguntes.
+- README.md: informació del projecte.
